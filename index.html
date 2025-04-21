@@ -125,9 +125,39 @@
       <a class="btn" href="profil_galeri.html">Profil & Galeri</a>
     </div>
   </div>
-  <audio autoplay loop hidden>
-    <source src="backsound.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>  
+
+  <button id="musicToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; padding: 10px 15px; border-radius: 10px; border: none; background: #000; color: #f8c15d; font-weight: bold; cursor: pointer;">
+    🔊 Musik ON
+  </button>
+
+  <audio id="bgMusic" loop>
+    <source src="musik.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <script>
+    const music = document.getElementById('bgMusic');
+    const toggleBtn = document.getElementById('musicToggle');
+    let isPlaying = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        toggleBtn.textContent = '🔇 Musik OFF';
+      } else {
+        music.play();
+        toggleBtn.textContent = '🔊 Musik ON';
+      }
+      isPlaying = !isPlaying;
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      music.play().then(() => {
+        isPlaying = true;
+      }).catch(() => {
+        toggleBtn.textContent = '🔇 Musik OFF';
+      });
+    });
+  </script> 
 </body>
 </html>
