@@ -700,11 +700,11 @@ strong {
 
 .site-footer strong {
   display: block;
-  color: var(--secondary-color);
+  color: #000000
 }
 
 .copyright-text {
-  font-size: #000000;
+  font-size:  var(--copyright-font-size);
 }
 
 
