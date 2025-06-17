@@ -273,7 +273,7 @@ strong {
 }
 
 .navbar-toggler {
-  background: var(--primary-color);
+  background: #000000;
   border-radius: var(--border-radius-large);
   position: fixed;
   top: 0;
