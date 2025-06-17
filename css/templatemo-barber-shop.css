@@ -424,7 +424,7 @@ strong {
   ABOUT              
 -----------------------------------------*/
 .about-section h6 {
-  color: var(--secondary-color);
+  color: #000000;
 }
 
 .about-section .custom-block-bg-overlay-image {
