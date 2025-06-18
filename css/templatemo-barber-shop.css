@@ -603,7 +603,6 @@ strong {
 .contact-block {
   background: var(--secondary-color);
   border-radius: var(--border-radius-medium);
-  transform: rotate(8deg);
   height: 100%;
   padding: 20px 40px;
 }
